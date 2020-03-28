@@ -11,15 +11,19 @@ async index(request,response) {
         .offset((page - 1) * 5) // a partir do limite de págs conta 5 por paginação
         .select([
             'incidents.*',
+            
             'ongs.name', 
             'ongs.email', 
             'ongs.whatsapp',
-            'ongs.city', 
+            'ongs.city',
             'ongs.uf'
         ]);
         response.header('X-Total-Count', count['count(*)']);
+        console.log("teste",incidents)
 
     return response.json(incidents);
+
+    
 },
 
     async create(request, response) {

@@ -1,25 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './global.css';
+import Routes from './routes';
 
-function App() {
+//JSX (Javascript + XML) html integrado dentro do js
+
+function App() { //Função que retorna html
+  //useState retorna um array de duas posições, 1º valor da variavel, 2º função de atualização(incremento)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //<Header title="Semana OmniStack"/> title = propriedade
+    <Routes />
   );
 }
 
